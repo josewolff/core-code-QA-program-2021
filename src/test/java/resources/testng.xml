@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Core-code-TestSuite" verbose="1">
+    <test name="Core code test">
+        <classes>
+            <class name="testngClass.Login"/>
+
+        </classes>
+    </test>
+    
+    <listeners>
+        <listener class-name="testngClass.listeners.CoreCodeListerner"></listener>
+    </listeners>
+</suite>
