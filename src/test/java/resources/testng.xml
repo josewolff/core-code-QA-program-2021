@@ -1,13 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Core-code-TestSuite" verbose="1">
+<suite name="Core-code-TestSuite" verbose="1" data-provider-thread-count="40">
+    <parameter name="numero1" value="3"/>
+    <parameter name="numero2" value="4"/>
+    <parameter name="expectedResult" value="7"/>
     <test name="Core code test">
         <classes>
-            <class name="testngClass.Login"/>
-
+            <class name="calculadora.SumaParametersXML"/>
+            <class name="calculadora.SumaDataProvider"/>
         </classes>
     </test>
     
     <listeners>
-        <listener class-name="testngClass.listeners.CoreCodeListerner"></listener>
+        <listener class-name="listeners.CoreCodeListerner"></listener>
     </listeners>
 </suite>

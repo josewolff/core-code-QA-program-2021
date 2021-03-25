@@ -3,14 +3,29 @@ package solidPractice.liskovPrinciple;
 public class MainLiskov {
 
     public static void main(String[] args){
-        Cuadrado cuadrado = new Cuadrado();
+        CalcularArea cuadrado = new Cuadrado();
         cuadrado.calculoArea();
+
+        CalcularArea rectangulo = new Rectangulo();
+        rectangulo.calculoArea();
+
+
 
         CalcularArea calcularArea = new Cuadrado();
 
-        Rectangulo rectangulo = new Rectangulo();
-        rectangulo.calculoArea();
+
+
+
+
+        print(cuadrado);
+        print(rectangulo);
     }
+
+
+    public static  void print(CalcularArea c){
+
+    }
+
 
     /**
      * x = cuadgrado

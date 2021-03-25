@@ -4,6 +4,7 @@ import solidPractice.interfaceSegregation.goodImplentation.interaces.ICarro;
 import solidPractice.interfaceSegregation.goodImplentation.interaces.ISuv;
 
 public class SUV implements ICarro, ISuv {
+
     @Override
     public void manejar() {
         System.out.println("manejar");
