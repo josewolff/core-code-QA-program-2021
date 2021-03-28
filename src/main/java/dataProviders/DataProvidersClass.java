@@ -10,11 +10,6 @@ public class DataProvidersClass {
 
     @DataProvider(name = "getParameters", parallel = true)
     public Iterator<Object[]> getParameters() {
-        List<Object[]> values = new ArrayList<Object[]>();
-        for (int i =0; i < 100; i++){
-            int expectedResult = i + i;
-            values.add(new Object[]{i,i,expectedResult});
-        }
-        return values.iterator();
+        return null;
     }
 }
