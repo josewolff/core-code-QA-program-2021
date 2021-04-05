@@ -3,8 +3,6 @@ package calculadora;
 import dataProviders.DataProvidersClass;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import testngClass.SoftAndHardAssert;
 
 public class SumaDataProvider {
 

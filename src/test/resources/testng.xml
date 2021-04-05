@@ -7,6 +7,7 @@
         <classes>
             <class name="calculadora.SumaParametersXML"/>
             <class name="calculadora.SumaDataProvider"/>
+            <class name="cucumber.runner.CucumberTestsRunner"/>
         </classes>
     </test>
     
