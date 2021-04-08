@@ -12,7 +12,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 
 
 public class InitDriver {
@@ -37,7 +36,7 @@ public class InitDriver {
 
     }
 
-    private WebDriver initDriver(String browser) {
+    private void initDriver(String browser) {
         try {
             selectDriverBasedOnOs();
             if (browser.equals("firefox")) {
@@ -65,16 +64,15 @@ public class InitDriver {
             }
 
             wait = new WebDriverWait(driver, 15,100);
-            return driver;
         } catch (Exception var5) {
             var5.printStackTrace();
             Assert.fail("fail to init the browser");
-            return null;
         }
     }
 
     private void selectDriverBasedOnOs(){
         String operativeSystem = System.getProperty("os.name").toLowerCase();
+        System.out.println(operativeSystem);
         if(operativeSystem.contains("mac")){
             geckoDriver = "drivers/mac/geckodriver";
             chromeDriver = "drivers/mac/chromedriver";
