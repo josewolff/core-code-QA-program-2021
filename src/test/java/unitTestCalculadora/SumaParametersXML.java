@@ -1,4 +1,4 @@
-package calculadora;
+package unitTestCalculadora;
 
 import org.testng.Assert;
 import org.testng.annotations.Parameters;

@@ -1,4 +1,4 @@
-package calculadora;
+package unitTestCalculadora;
 
 public class Suma {
     public int sumar(int numero1, int numero2) {

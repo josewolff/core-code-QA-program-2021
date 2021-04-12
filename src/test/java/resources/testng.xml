@@ -5,8 +5,8 @@
     <parameter name="expectedResult" value="7"/>
     <test name="Core code test">
         <classes>
-            <class name="calculadora.SumaParametersXML"/>
-            <class name="calculadora.SumaDataProvider"/>
+            <class name="unitTestCalculadora.SumaParametersXML"/>
+            <class name="unitTestCalculadora.SumaDataProvider"/>
         </classes>
     </test>
     

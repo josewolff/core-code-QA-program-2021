@@ -1,0 +1,22 @@
+{
+  "firefox59": {
+    "browserName": "firefox",
+    "version": "59.0.2",
+    "platform": "LINUX"
+  },
+  "firefox86": {
+    "browserName": "firefox",
+    "version": "86.0",
+    "platform": "LINUX"
+  },
+  "chrome66": {
+    "browserName": "chrome",
+    "version": "66.0.3359.117",
+    "platform": "LINUX"
+  },
+  "chrome89": {
+    "browserName": "chrome",
+    "version": "89.0.4389.82",
+    "platform": "LINUX"
+  }
+}
