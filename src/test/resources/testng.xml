@@ -7,6 +7,12 @@
         <classes>
             <class name="unitTestCalculadora.SumaParametersXML"/>
             <class name="unitTestCalculadora.SumaDataProvider"/>
+            <class name="unitTestCalculadora.SumaParametersXML"/>
+            <class name="integrationTesting.get.GetUsersGSON"/>
+            <class name="integrationTesting.post.GetUsersPOST"/>
+            <class name="integrationTesting.delete.UsersDeleteAll"/>
+            <class name="systemTesting.pomSolid.CreateAccountPOMSolid"/>
+            <class name="systemTesting.tableExample.TableExample"/>
         </classes>
     </test>
     
