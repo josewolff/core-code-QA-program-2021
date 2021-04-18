@@ -36,7 +36,7 @@ public class GridCapabilities {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.4");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        desiredCapabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
+        desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "safari");
         return desiredCapabilities;
     }
 }

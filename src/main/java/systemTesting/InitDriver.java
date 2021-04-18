@@ -26,7 +26,7 @@ public class InitDriver {
     private String chromeDriver = "";
 
     @BeforeClass(alwaysRun = true)
-    public void openDriver(@Optional("chrome") String runOn, @Optional("firefox86") String gridBrowser) {
+    public void openDriver(@Optional("appium") String runOn, @Optional("chrome66") String gridBrowser) {
         initDriver(runOn, gridBrowser);
     }
 
