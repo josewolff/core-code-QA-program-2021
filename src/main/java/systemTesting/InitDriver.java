@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.net.URL;
 
@@ -25,6 +26,7 @@ public class InitDriver {
     private String geckoDriver = "";
     private String chromeDriver = "";
 
+    @Parameters({"runOn","browser"})
     @BeforeClass(alwaysRun = true)
     public void openDriver(@Optional("appium") String runOn, @Optional("chrome66") String gridBrowser) {
         initDriver(runOn, gridBrowser);

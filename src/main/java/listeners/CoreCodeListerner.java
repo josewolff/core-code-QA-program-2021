@@ -4,12 +4,15 @@ import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import utils.GlobalVariables;
 
 public class CoreCodeListerner implements ISuiteListener, ITestListener {
 
     @Override
     public void onStart(ISuite suite) {
         System.out.println("Suite started");
+        GlobalVariables.apiHost = suite.getParameter("apiHost");
+        GlobalVariables.seleniumHost = suite.getParameter("seleniumHost");
     }
 
     @Override
