@@ -32,8 +32,5 @@ public class CreateAccountPOMSolid extends InitDriver {
         }
     }
 
-    @AfterClass(alwaysRun = true)
-    public void tearDown(){
-        takeScreenShots.takeScreenShot("createaccount.png");
-    }
+
 }

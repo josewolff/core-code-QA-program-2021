@@ -23,7 +23,7 @@
             <class name="integrationTesting.delete.UsersDeleteAll"/>
             <class name="systemTesting.pomSolid.CreateAccountPOMSolid"/>
             <class name="systemTesting.tableExample.TableExample"/>
-            <class name="cucumber.runner.CucumberTestsRunner"/>
+            <class name="cucumberTests.runner.CucumberTestsRunner"/>
         </classes>
     </test>
 

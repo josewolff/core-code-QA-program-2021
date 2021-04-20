@@ -6,19 +6,21 @@ import org.testng.annotations.Test;
 import systemTesting.InitDriver;
 import systemTesting.pomSolid.CreateAccountModelActions;
 import systemTesting.tables.TableActions;
+import utils.GlobalVariables;
 
 public class TableExample extends InitDriver {
 
     private TableActions tableActions;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void goToPage(){
-        driver.get("http://localhost:7000/tables.html");
+        driver.get(GlobalVariables.seleniumHost +"/tables.html");
         tableActions = new TableActions(driver,wait);
     }
 
-    @Test
+    @Test(groups = {"table-test"})
     public void createAccountTest() {
+        System.out.println(GlobalVariables.seleniumHost);
         tableActions.readTableContent();
     }
 }

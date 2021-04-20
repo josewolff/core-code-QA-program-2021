@@ -2,9 +2,9 @@
 <suite name="Core-code Program TestSuite" preserve-order="true" allow-return-values="true" verbose="1">
 
     <parameter name="includeGroup" value="tesitng-cucumber"/>
-    <parameter name="apiHost" value="http://localhost:5000"/>
-    <parameter name="seleniumHost" value="http://localhost:7000/"/>
-    <parameter name="runOn" value="firefox"/>
+    <parameter name="apiHost" value="none"/>
+    <parameter name="seleniumHost" value="http://localhost:7000"/>
+    <parameter name="runOn" value="chrome"/>
     <parameter name="browser" value="chrome"/>
     <test name="Test Cases">
         <groups>
@@ -23,7 +23,7 @@
             <class name="integrationTesting.delete.UsersDeleteAll"/>
             <class name="systemTesting.pomSolid.CreateAccountPOMSolid"/>
             <class name="systemTesting.tableExample.TableExample"/>
-            <class name="cucumber.runner.CucumberTestsRunner"/>
+            <class name="cucumberTests.runner.CucumberTestsRunner"/>
         </classes>
     </test>
 

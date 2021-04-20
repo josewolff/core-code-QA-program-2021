@@ -27,11 +27,19 @@ public class CreateAccountModelActions extends CreateAccountModel{
         clickRegisterAccount();
     }
 
-    private void writeFirstName(String text){
+    public WebElement getFirstNameElement(){
+        return firstName;
+    }
+
+    public WebElement getLastNameElement(){
+        return lastName;
+    }
+
+    public  void writeFirstName(String text){
         firstName.sendKeys(text);
     }
 
-    private void writeLastName(String text){
+    public void writeLastName(String text){
         lastName.sendKeys(text);
     }
 
