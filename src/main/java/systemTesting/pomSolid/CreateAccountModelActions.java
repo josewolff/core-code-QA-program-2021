@@ -43,19 +43,23 @@ public class CreateAccountModelActions extends CreateAccountModel{
         lastName.sendKeys(text);
     }
 
-    private void writeEmail(String text){
+    public void writeEmail(String text){
         email.sendKeys(text);
     }
 
-    private void writePassword(String text){
+    public void writePassword(String text){
         password.sendKeys(text);
     }
-    private void writeRepeatPassword(String text){
+    public void writeRepeatPassword(String text){
         repeatPassword.sendKeys(text);
     }
 
-    private void clickRegisterAccount(){
+    public void clickRegisterAccount(){
         registerAccount.click();
+    }
+
+    public void clickRegisterWithGoogleButton(){
+        registerWithGoogle.click();
     }
 
 

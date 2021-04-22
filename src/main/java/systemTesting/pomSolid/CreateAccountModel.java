@@ -22,4 +22,7 @@ public class CreateAccountModel {
 
     @FindBy(xpath = "//a[contains(text(),'Register Account')]")
     protected WebElement registerAccount;
+
+    @FindBy(xpath = "//a[contains(@class,'btn-google')]")
+    protected WebElement registerWithGoogle;
 }

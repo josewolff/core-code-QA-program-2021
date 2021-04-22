@@ -3,7 +3,7 @@
 
     <parameter name="includeGroup" value="tesitng-cucumber"/>
     <parameter name="apiHost" value="none"/>
-    <parameter name="seleniumHost" value="http://localhost:7000"/>
+    <parameter name="seleniumHost" value="http://localhost:7000/"/>
     <parameter name="runOn" value="chrome"/>
     <parameter name="browser" value="chrome"/>
     <test name="Test Cases">
