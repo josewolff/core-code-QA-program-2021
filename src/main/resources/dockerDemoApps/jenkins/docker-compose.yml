@@ -1,0 +1,15 @@
+# Use root/example as user/password credentials
+version: '3'
+
+services:
+  jenkins:
+    image: wolffjose/jenkinsinstanceexamples:latest
+    restart: always
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - /Users/JoseWolff/Desktop/Jenkins_Data:/var/jenkins_home
+
+
+        /Users/JoseWolff/Desktop/New-Jenkins:/var/jenkins_home

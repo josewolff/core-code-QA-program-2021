@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class GetUsersGSON {
 
-    @Test
+    @Test(groups = {"apiTesting","get"})
     public void getAllUsers(){
         Response response = RequestMaker.makeGetRequest("http://localhost:5000/users/all");
         String responseString = response.asString();
@@ -24,7 +24,7 @@ public class GetUsersGSON {
         System.out.println(responseString);
     }
 
-    @Test
+    @Test(groups = {"apiTesting", "get"})
     public void getBYId(){
         Response response = RequestMaker.makeGetRequest("http://localhost:5000/users/findbyid/13");
         String responseString = response.asString();

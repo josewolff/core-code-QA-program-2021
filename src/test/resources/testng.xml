@@ -10,7 +10,7 @@
         <groups>
             <run>
                 
-                <include name="tesitng-cucumber"/>
+                <include name="unitTesting"/>
                 
             </run>
         </groups>

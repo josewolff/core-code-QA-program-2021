@@ -5,12 +5,13 @@ import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
+import utils.GlobalVariables;
 
 public class GetUsersJSON {
 
-    @Test
+    @Test(groups = {"apiTesting","get"})
     public void getAllUsers(){
-        Response response = RequestMaker.makeGetRequest("http://localhost:5000/users/all");
+        Response response = RequestMaker.makeGetRequest(GlobalVariables.apiHost + "/users/all");
         String responseString = response.asString();
         JSONArray json = new JSONArray(responseString);
         for (int i = 0; i < json.length(); i ++){
@@ -23,9 +24,9 @@ public class GetUsersJSON {
         System.out.println(responseString);
     }
 
-    @Test
+    @Test(groups = {"apiTesting", "get"})
     public void getBYId(){
-        Response response = RequestMaker.makeGetRequest("http://localhost:5000/users/findbyid/1842");
+        Response response = RequestMaker.makeGetRequest(GlobalVariables.apiHost + "/users/findbyid/1842");
         String responseString = response.asString();
         JSONObject json = new JSONObject(responseString);
         System.out.println(json.getInt("id"));

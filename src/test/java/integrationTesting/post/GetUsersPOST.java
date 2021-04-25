@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import utils.GlobalVariables;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -16,9 +17,9 @@ import static io.restassured.RestAssured.given;
 
 public class GetUsersPOST {
 
-    @Test(dataProviderClass = DataProvidersClass.class, dataProvider = "getParameters")
+    @Test(dataProviderClass = DataProvidersClass.class, dataProvider = "getParameters", groups = {"apiTesting", "post"})
     public void createNewUser(String bodyContent){
-        Response response = RequestMaker.makePostRequest("http://localhost:5000/users/add",bodyContent);
+        Response response = RequestMaker.makePostRequest(GlobalVariables.apiHost + "/users/add",bodyContent);
         if(bodyContent.contains("499")){
             Assert.fail("fails");
         }

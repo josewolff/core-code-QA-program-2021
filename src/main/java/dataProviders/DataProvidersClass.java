@@ -22,4 +22,15 @@ public class DataProvidersClass {
         }
         return data.iterator();
     }
+
+
+    @DataProvider(name = "getParametersUnitTest", parallel = true)
+    public Iterator<Object[]> getParametersUnitTest() {
+        Collection<Object[]> data = new ArrayList<>();
+        for (int i = 0; i < 500; i++){
+            int expectedResult = i + i;
+            data.add(new Object[]{i,i,expectedResult});
+        }
+        return data.iterator();
+    }
 }

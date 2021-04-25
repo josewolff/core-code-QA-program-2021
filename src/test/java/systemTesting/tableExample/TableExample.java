@@ -18,7 +18,7 @@ public class TableExample extends InitDriver {
         tableActions = new TableActions(driver,wait);
     }
 
-    @Test(groups = {"table-test"})
+    @Test(groups = {"table-test", "systemTesting"})
     public void createAccountTest() {
         System.out.println(GlobalVariables.seleniumHost);
         tableActions.readTableContent();

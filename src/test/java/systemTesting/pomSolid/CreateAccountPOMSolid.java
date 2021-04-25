@@ -20,7 +20,7 @@ public class CreateAccountPOMSolid extends InitDriver {
         takeScreenShots = new TakeScreenShots(driver);
     }
 
-    @Test(groups = {"CreateUser"})
+    @Test(groups = {"CreateUser", "systemTesting"})
     public void createAccountTest() throws InterruptedException {
 
         System.out.println(driver.getCurrentUrl());
