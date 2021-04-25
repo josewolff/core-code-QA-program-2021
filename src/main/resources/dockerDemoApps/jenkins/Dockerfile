@@ -1,3 +1,3 @@
 FROM jenkins/jenkins:lts
-USER jenkins
+USER root
 COPY . /usr/share/jenkins/ref/
