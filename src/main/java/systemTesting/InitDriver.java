@@ -51,7 +51,7 @@ public class InitDriver {
                 driver = new FirefoxDriver();
                 driver.manage().window().maximize();
             } else {
-                if (runOn.equals("chrome")) {
+                if (runOn.equalsIgnoreCase("chrome")) {
                     System.setProperty("webdriver.chrome.driver", chromeDriver);
                     DesiredCapabilities caps = DesiredCapabilities.chrome();
                     ChromeOptions options = new ChromeOptions();
@@ -59,11 +59,11 @@ public class InitDriver {
                     options.merge(caps);
                     driver = new ChromeDriver(options);
 
-                } else if (runOn.equals("ie")) {
+                } else if (runOn.equalsIgnoreCase("ie")) {
                     System.setProperty("webdriver.ie.driver", "drivers/windows/IEDriverServer.exe");
                     driver = new InternetExplorerDriver();
                     driver.manage().window().maximize();
-                } else if (runOn.equals("safari")) {
+                } else if (runOn.equalsIgnoreCase("safari")) {
                     driver = new SafariDriver();
                     driver.manage().window().maximize();
                 }else if (runOn.equalsIgnoreCase("grid")){
