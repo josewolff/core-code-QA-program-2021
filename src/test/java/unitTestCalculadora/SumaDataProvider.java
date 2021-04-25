@@ -10,7 +10,7 @@ public class SumaDataProvider {
     public void sumaDosnumeros(int numero1, int numero2, int expectedResult) throws InterruptedException {
         Suma suma = new Suma();
         int  actualResult =  suma.sumar(numero1,numero2);
-        Thread.sleep(2000);
+        Thread.sleep(50);
         Assert.assertEquals(actualResult,expectedResult, " La suma no es correcta.");
 
 
