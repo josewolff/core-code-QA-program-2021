@@ -1,0 +1,41 @@
+def checkout = { String subFolder ->
+    checkout([
+            $class      : "GitSCM",
+            branches    : [[name: "*/master"]],
+            extensions  : [[ $class: "RelativeTargetDirectory",
+                             relativeTargetDir: subFolder
+                           ]],
+            userRemoteConfigs: [[
+                                        url : 'git@github.com:josewolff/core-code-QA-program-2021.git',
+                                        credentialsId: "jenkins"
+                                ]]
+    ])
+}
+
+def runner = { commandToExecute -> isUnix() ? sh(commandToExecute) : bat(commandToExecute) }
+
+
+unitTest:{
+    stage("Unit Testing"){
+        node('NewNode'){
+            checkout("tests")
+            runner 'cd tests && mvn test -DincludeGroup=unitTesting'
+        }
+    }
+}
+IntegrationTest:{
+    stage("Integration Testing"){
+        node('NewNode'){
+            checkout("tests")
+            runner 'cd tests && mvn test -DincludeGroup=apiTesting -DapiHost=${apiHost}'
+        }
+    }
+}
+SystemTest:{
+    stage("System or E2E Testing"){
+        node('NewNode'){
+            checkout("tests")
+            runner 'cd tests && mvn test -DincludeGroup=systemTesting -DseleniumHost=${webAppHost} -DrunOn=Chrome'
+        }
+    }
+}
