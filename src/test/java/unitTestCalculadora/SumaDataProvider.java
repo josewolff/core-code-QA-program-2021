@@ -14,7 +14,7 @@ public class SumaDataProvider {
         Assert.assertEquals(actualResult,expectedResult, " La suma no es correcta.");
 
         if(numero1 >=250){
-            Assert.fail("Testing fial");
+            //Assert.fail("Testing fial");
         }
         String expectedUrl = "";
         String currentUrl = "";
